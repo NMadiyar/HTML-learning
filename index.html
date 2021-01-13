@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Главная страница</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Madiyar Naizabekov">
+    <meta name="description" content="Testovaia stranica">
+    <meta name="keywords" content="test, probnaia, html"
+<!--link используется только в head для сss -->
+<link rel="stylesheet" href="css/main.css"
+  </head>
+
+  <body>
+<!-- header используется как шапка смотрится div, можно сделать так же
+ div id="header", но лучше использовать header-->
+<header>Шапка</header>
+<!-- main используется для основной части сайта-->
+<main>Основная часть сайта</main>
+<!-- aside используется для создания боковой части сайта-->
+<aside>Боковая часть сайта</aside>
+<!-- footer используется для создания нижней части сайта-->
+<footer>Футер</footer>
+<!-- progress используется для создания полосы загрузки, в некоторых браузерах
+может не поддерживаться, поэтому между тегами можно прописать вручную надпись.
+max означает максимальное значение, а value отображает изначальное значение-->
+<progress max="100" value="35">Загружено на 35%</progress><br>
+<!-- details нужен для создания текста, который свернут, между тегом можно прописать
+текстовое значение от summary-->
+<!--summary отвечает как будет кнопка называться-->
+<details>
+<summary>Подробнее</summary>
+Lorem ipsu traplalalsdkasdkjaklsjflkaslkjdflasjdflklaf
+</details>
+
+Hello world!
+<!-- Kommentarii -->
+<h1 title="Title mojno dobavlyat vezde">Zagolovok1</h1>
+<h2 title="Title mojno dobavlyat vezde">Zagolovok<big>2</big></h2>
+<h2 title="Title mojno dobavlyat vezde">Zagolovok<small>3</small></h2>
+<p>prosto text</p>
+
+<pre> Soxraniaet
+     otstupi
+lubie v
+texte
+e </pre>
+
+<code>Let x = 0;</code><br>
+H<sub>2</sub>0<br><hr>
+a<sup>2</sup>
+
+<abbr title="Hypertext markup language">HTML</abbr>
+
+<address>
+  Almaty, Kazakhstan
+</address>
+
+
+<ol start="1"  >
+
+  <li>Купи машину</li>
+  <li>Kupi morkovku</li>
+  <li>Kupi mashinu</li>
+</ol>
+
+
+<ul type="circle">
+  <li>Купи машину</li>
+  <li>Kupi morkovku</li>
+  <li>Kupi mashinu</li>
+</ul>
+
+<p title="Some">Some text </p>
+<!-- Создание ссылок, _blank создает новое окно, по умолчанию стоит _self -->
+<a href="#Bottomofthepage">Вниз</a>
+<a href="https://google.com" title="Переход в гугл" target="_blank">Перейти на страницу </a><br>
+
+<a href="about.html" target="_blank" title="Страница абоут"> Переход на другую страницу </a><br>
+
+<a name="Bottomofthepage"></a><br>
+<a href="mailto:venomn73@mail.ru">Написать на почту </a>
+
+<!--html, metodologia bm, css, v csse: (flexbox model, grid model, animation), osnovi js-->
+
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTErO-iEejxvbKqEyk7VfLUn5Oy0p0iffPMXw&usqp=CAU"
+width="500px" height="200px" title="Venom" alt="Venom!">
+
+<img src="images/venom.jpg" alt="Venom123" width="500px" height = "200px">
+
+<!-- создание таблиц -->
+<table border="1" width="500px">
+  <thead>
+    <tr>
+      <th>Имя</th>
+      <th>Фамилия</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+<tr>
+  <td>John</td>
+  <td>Doe</td>
+</tr>
+      <tr>
+        <td>John1</td>
+        <td>Doe1</td>
+      </tr>
+      <tr>
+        <td>John2</td>
+        <td>Doe2</td>
+      </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>The last</td>
+      <td>One</td>
+    </tr>
+  </tfoot>
+</table>
+<!-- script используется везде для jsa, но для оптимизации нужно ставить в конце,
+перед боди, чтобы сайт прогрузился сначала, а потом скрипт  -->
+<script src="js/main.js"></script>
+
+
+<!-- div и span, div отвечает за создание блока, на 100% ширину, создает новый абзац как <p></p>,
+но только с меньшим отступом, а тег span отвечает за строковое значение, т.е
+<div>Any <span>text</span></div>, в этой части можно будет в css изменить text,
+а в div только целый блок-->
+<div> Просто текст </div>
+<div> Просто текст </div>
+<span>Просто текст</span>
+<span>Просто текст</span>
+<div>Просто <span>текст</span></div>
+
+<!-- Создание хтмл форм и полей для ввода, для form существует 2 обязательных
+аттрибута, action - отвечает за переход из формы, method - за способ получения
+информации-->
+<form action="" method ="post">
+  <!-- label - служить для подписи различным полям-->
+  <!-- for аттрибут используется для label,чтобы указать какое инпут поле работает с ним-->
+  <label for="user_name">Введите имя</label>
+  <!-- инпут как поле ввода, обязательно нужно выбрать аттрибут типа-->
+  <!-- placeholder заполняет поле ввода каким-либо значением (прозрачным при пустом поле)-->
+  <!--value заранее заполняет поле ввода заданным значением, значние value передается на сервер
+при заполнении radio и checkbox-->
+  <!-- maxlength означает максимальное количество символов в поле ввода-->
+  <!-- есть различные состояния тега input: hidden(скрытый), disabled (недоступный),readonly(только для чтения)-->
+  <!-- name дает имя input полю, чтобы было легко обратиться через js именно к этому полю-->
+  <!-- id тег дает уникальный номер для каждого тега,можно использовать где угодно,
+   чтобы можно было изменить его через css, нельзя использовать одинаковые id-->
+   <!-- checked при заполнении radio и checkbox означает заполненым вариант, на котором
+   стоит данный аттрибут-->
+  <input type="text"  placeholder="Введите что-то"
+  value="что-то" maxlength="5" name="user_name" id="user_name"><br>
+<!-- для пароля используется type:password -->
+  <label for="pass">Пароль</label>
+  <input type="password" id="pass" placeholder="Введите пароль"><br>
+  <!-- для е-mail используется type:email-->
+  <label for="email">E-mail</label>
+  <input type="email" id="email" placeholder="Почта"><br>
+  <!-- для url используется type:url-->
+  <label for="url">URL</label>
+  <input type="url" id="url" placeholder="url страница"><br>
+  <!-- type:color используется для вызова спектра цветов, поддерживается
+  не во всех бразуерах(эксплорер, эдж)-->
+  <label for="colors">Палитра цветов</label>
+  <input type="color" id="colors" ><br>
+  <!-- type:data, time, datetime используется для времени, так же поддерживается
+  не во всех версиях-->
+  <label for="date">Дата и время</label>
+  <input type="date" id="date">
+  <input type="time" id="time"><br>
+  <!--type:checkbox используется для проставления галочек-->
+  <label for="checkbox">Галочка</label>
+  <input type="checkbox" name="checkbox" id="checkbox"><br>
+  <!-- type:radio использует кружочки как галочки, для того, чтобы выбралась одна галочка
+  можно задать одинаковый name, одинаковый name задает одну группу для выбора-->
+  <label for="radio">Выберите кружочек</label>
+  <input type="radio" name="radio">
+  <input type="radio" name="radio"><br>
+  <!-- type:file используется для выбора файла и отправки на сервер-->
+  <label for="file">Выберите файл</label>
+  <input type="file" name="file"><br>
+  <!-- type:search используется именно для поиска на сайте-->
+  <label for="">Для поиска на сайте</label>
+  <input type="search" name="search"><br>
+  <!-- type reset, button, submit это кнопки. Reset сбрасывает все данные с формы
+  input, button просто создает кнопку, submit отправляет заполненные данные на сервер-->
+  <input type="submit" value="Отправить">
+  <input type="reset" value="Очистить">
+  <input type="button" value="Простая кнопка"><br>
+<!-- textarea тег отвечает за создание большого поля для текста, тег name можно добавлять
+к input и textarea-->
+<!-- аттрибут required не отправит данные на сервер, если вы не введете данные. аттрибут value
+не работает, текст нужно писать между textarea-->
+  <textarea name="name" placeholder="Введите текст" maxlength="50" >Просто текст</textarea><br>
+<!-- тег button отвечает за создание кнопки, можно задать аттрибут type: button,
+reset, submit-->
+<button type="submit" name="button">Готово</button><br>
+<!-- select селектор выбора, для него есть тег option, что открывает доп варианты
+как в случае с ol использующего li-->
+<!-- multiple отвечает за выбор множества вариантов, так же можно поставить
+в selected множество вариантов-->
+<!-- size отвечает за количество возможных вариантов-->
+<select multiple size="4">
+<!-- disabled отвечает за невозможность выбора варианта-->
+  <option disabled>----</option>
+  <option>BMW</option>
+  <option selected>Audi</option>
+<!-- selected отвечает за выбор по умолчанию после обновления страницы-->
+  <option selected>Mercedes</option>
+
+</select>
+
+
+
+
+
+</form>
+
+  </body>
+</html>

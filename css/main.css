@@ -1,0 +1,11 @@
+.table_body{
+  background-color: yellow;
+}
+thead{
+  background-color: purple;
+}
+th:hover{
+color: red;
+cursor: pointer;
+background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/274px-Rotating_earth_%28large%29.gif');
+}
